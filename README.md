@@ -1,4 +1,4 @@
-# ESIM Summer Fellowship – IC Contributions  
+# eSim Summer Fellowship – IC Contributions  
 
 ## About eSim  
 [eSim](https://esim.fossee.in/) is an open-source Electronic Design Automation (EDA) tool developed by the **FOSSEE team at IIT Bombay**.  
