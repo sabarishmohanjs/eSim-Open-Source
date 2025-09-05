@@ -1,0 +1,37 @@
+* C:\Users\sabarishmohan\eSim-Workspace\tc4008bp_test\tc4008bp_test.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 07/10/25 00:13:47
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X1  Net-_U10-Pad9_ Net-_U10-Pad11_ Net-_U10-Pad12_ Net-_U10-Pad13_ Net-_U10-Pad14_ Net-_U10-Pad15_ Net-_U10-Pad16_ Net-_U11-Pad2_ Net-_U12-Pad5_ Net-_U12-Pad4_ Net-_U12-Pad3_ Net-_U12-Pad2_ Net-_U12-Pad1_ Net-_U10-Pad10_ tc4008bp		
+U10  a4 b4 b3 a3 b2 a2 b1 a1 Net-_U10-Pad9_ Net-_U10-Pad10_ Net-_U10-Pad11_ Net-_U10-Pad12_ Net-_U10-Pad13_ Net-_U10-Pad14_ Net-_U10-Pad15_ Net-_U10-Pad16_ adc_bridge_8		
+U11  cin Net-_U11-Pad2_ adc_bridge_1		
+U12  Net-_U12-Pad1_ Net-_U12-Pad2_ Net-_U12-Pad3_ Net-_U12-Pad4_ Net-_U12-Pad5_ cout s4 s3 s2 s1 dac_bridge_5		
+v1  a4 GND pulse		
+v2  b4 GND pulse		
+v3  b3 GND pulse		
+v4  a3 GND pulse		
+v5  b2 GND pulse		
+v6  a2 GND pulse		
+v7  b1 GND pulse		
+v8  a1 GND pulse		
+v9  cin GND DC		
+U1  a4 plot_v1		
+U2  b4 plot_v1		
+U3  b3 plot_v1		
+U4  a3 plot_v1		
+U5  b2 plot_v1		
+U6  a2 plot_v1		
+U7  b1 plot_v1		
+U8  a1 plot_v1		
+U9  cin plot_v1		
+U13  cout plot_v1		
+U15  s4 plot_v1		
+U16  s3 plot_v1		
+U14  s1 plot_v1		
+U17  s2 plot_v1		
+
+.end

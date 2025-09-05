@@ -1,0 +1,26 @@
+* C:\Users\sabarishmohan\eSim-Workspace\cd4070b_test\cd4070b_test.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 06/23/25 22:37:24
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X1  a b o2 o1 Net-_X1-Pad5_ Net-_X1-Pad6_ GND Net-_X1-Pad8_ Net-_X1-Pad9_ o4 o3 Net-_X1-Pad12_ Net-_X1-Pad13_ Net-_X1-Pad14_ cd4070b		
+v1  a GND pulse		
+v2  b GND pulse		
+v3  Net-_X1-Pad5_ GND pulse		
+v4  Net-_X1-Pad6_ GND pulse		
+v5  Net-_X1-Pad8_ GND pulse		
+v6  Net-_X1-Pad9_ GND pulse		
+v7  Net-_X1-Pad12_ GND pulse		
+v8  Net-_X1-Pad13_ GND pulse		
+v9  Net-_X1-Pad14_ GND DC		
+U1  a plot_v1		
+U2  b plot_v1		
+U3  o1 plot_v1		
+U4  o2 plot_v1		
+U5  o3 plot_v1		
+U6  o4 plot_v1		
+
+.end

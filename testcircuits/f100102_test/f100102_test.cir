@@ -1,0 +1,39 @@
+* C:\Users\sabarishmohan\eSim-Workspace\f100102_test\f100102_test.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 07/04/25 23:10:10
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X1  Net-_U4-Pad11_ Net-_U6-Pad4_ Net-_U6-Pad5_ Net-_U6-Pad3_ Net-_U6-Pad2_ Net-_U6-Pad1_ Net-_U5-Pad5_ Net-_U5-Pad3_ Net-_U5-Pad4_ Net-_U5-Pad2_ Net-_U5-Pad1_ Net-_U3-Pad6_ Net-_U3-Pad7_ Net-_U3-Pad8_ Net-_U3-Pad9_ Net-_U4-Pad12_ Net-_U3-Pad10_ Net-_U4-Pad7_ Net-_U4-Pad8_ Net-_U4-Pad9_ Net-_U4-Pad10_ f100102		
+U3  d1a d2a Net-_U3-Pad3_ Net-_U3-Pad4_ Net-_U3-Pad5_ Net-_U3-Pad6_ Net-_U3-Pad7_ Net-_U3-Pad8_ Net-_U3-Pad9_ Net-_U3-Pad10_ adc_bridge_5		
+U4  Net-_U4-Pad1_ Net-_U4-Pad2_ Net-_U4-Pad3_ Net-_U4-Pad4_ Net-_U4-Pad5_ e Net-_U4-Pad7_ Net-_U4-Pad8_ Net-_U4-Pad9_ Net-_U4-Pad10_ Net-_U4-Pad11_ Net-_U4-Pad12_ adc_bridge_6		
+U5  Net-_U5-Pad1_ Net-_U5-Pad2_ Net-_U5-Pad3_ Net-_U5-Pad4_ Net-_U5-Pad5_ Qa Qabar Qb Qbbar Qc dac_bridge_5		
+U6  Net-_U6-Pad1_ Net-_U6-Pad2_ Net-_U6-Pad3_ Net-_U6-Pad4_ Net-_U6-Pad5_ Qcbar Qd Qdbar Qe Qebar dac_bridge_5		
+v1  d1a GND pulse		
+v3  Net-_U3-Pad3_ GND pulse		
+v5  Net-_U3-Pad5_ GND pulse		
+v7  Net-_U4-Pad2_ GND pulse		
+v9  Net-_U4-Pad4_ GND pulse		
+v11  e GND pulse		
+v2  d2a GND pulse		
+v4  Net-_U3-Pad4_ GND pulse		
+v6  Net-_U4-Pad1_ GND pulse		
+v8  Net-_U4-Pad3_ GND pulse		
+v10  Net-_U4-Pad5_ GND pulse		
+U1  d1a plot_v1		
+U2  d2a plot_v1		
+U7  Qa plot_v1		
+U9  Qabar plot_v1		
+U11  Qb plot_v1		
+U13  Qbbar plot_v1		
+U15  Qc plot_v1		
+U16  Qcbar plot_v1		
+U14  Qd plot_v1		
+U12  Qdbar plot_v1		
+U10  Qe plot_v1		
+U8  Qebar plot_v1		
+U17  e plot_v1		
+
+.end

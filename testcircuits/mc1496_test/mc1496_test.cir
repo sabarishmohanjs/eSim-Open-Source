@@ -1,0 +1,33 @@
+* C:\Users\sabarishmohan\eSim-Workspace\mc1496_test\mc1496_test.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 06/22/25 14:46:35
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X1  mod Net-_R7-Pad2_ Net-_R7-Pad1_ Net-_R3-Pad1_ Net-_R8-Pad1_ pos_op ? Net-_C1-Pad1_ ? carr ? neg_op ? Net-_X1-Pad14_ ic_mc1496		
+R6  Net-_R3-Pad1_ GND 51		
+R4  mod GND 51		
+R3  Net-_R3-Pad1_ Net-_R2-Pad2_ 10k		
+R1  mod Net-_R1-Pad2_ 10k		
+R2  Net-_R1-Pad2_ Net-_R2-Pad2_ 50k		
+R7  Net-_R7-Pad1_ Net-_R7-Pad2_ 1k		
+R8  Net-_R8-Pad1_ GND 6.8k		
+R9  pos_op Net-_R10-Pad2_ 3.9k		
+R11  Net-_R10-Pad2_ neg_op 3.9k		
+v2  Net-_R10-Pad2_ GND 12		
+R10  Net-_C1-Pad1_ Net-_R10-Pad2_ 1k		
+C1  Net-_C1-Pad1_ GND 0.1u		
+R5  GND Net-_C1-Pad1_ 1k		
+R12  carr Net-_C1-Pad1_ 51		
+v1  mod GND sine(0 1 1000)		
+v3  carr GND sine(0 1 10000)		
+U1  mod plot_v1		
+U4  carr plot_v1		
+U3  neg_op plot_v1		
+U2  pos_op plot_v1		
+v4  Net-_X1-Pad14_ Net-_R13-Pad1_ -8		
+R13  Net-_R13-Pad1_ GND 1k		
+
+.end

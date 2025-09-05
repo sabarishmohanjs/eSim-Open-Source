@@ -1,0 +1,66 @@
+* c:\users\sabarishmohan\esim-workspace\f100102_test\f100102_test.cir
+
+.include f100102.sub
+x1 net-_u4-pad11_ net-_u6-pad4_ net-_u6-pad5_ net-_u6-pad3_ net-_u6-pad2_ net-_u6-pad1_ net-_u5-pad5_ net-_u5-pad3_ net-_u5-pad4_ net-_u5-pad2_ net-_u5-pad1_ net-_u3-pad6_ net-_u3-pad7_ net-_u3-pad8_ net-_u3-pad9_ net-_u4-pad12_ net-_u3-pad10_ net-_u4-pad7_ net-_u4-pad8_ net-_u4-pad9_ net-_u4-pad10_ f100102
+* u3  d1a d2a net-_u3-pad3_ net-_u3-pad4_ net-_u3-pad5_ net-_u3-pad6_ net-_u3-pad7_ net-_u3-pad8_ net-_u3-pad9_ net-_u3-pad10_ adc_bridge_5
+* u4  net-_u4-pad1_ net-_u4-pad2_ net-_u4-pad3_ net-_u4-pad4_ net-_u4-pad5_ e net-_u4-pad7_ net-_u4-pad8_ net-_u4-pad9_ net-_u4-pad10_ net-_u4-pad11_ net-_u4-pad12_ adc_bridge_6
+* u5  net-_u5-pad1_ net-_u5-pad2_ net-_u5-pad3_ net-_u5-pad4_ net-_u5-pad5_ qa qabar qb qbbar qc dac_bridge_5
+* u6  net-_u6-pad1_ net-_u6-pad2_ net-_u6-pad3_ net-_u6-pad4_ net-_u6-pad5_ qcbar qd qdbar qe qebar dac_bridge_5
+v1  d1a gnd pulse(0 5 0 0 0 5 10)
+v3  net-_u3-pad3_ gnd pulse(5 0 0 0 0 2 4)
+v5  net-_u3-pad5_ gnd pulse(0 5 0 0 0 5 10)
+v7  net-_u4-pad2_ gnd pulse(5 0 0 0 0 2 4)
+v9  net-_u4-pad4_ gnd pulse(5 0 0 0 0 4 8)
+v11  e gnd pulse(0 5 0 0 0 5 10)
+v2  d2a gnd pulse(0 5 0 0 0 5 10)
+v4  net-_u3-pad4_ gnd pulse(5 0 0 0 0 5 10)
+v6  net-_u4-pad1_ gnd pulse(0 5 0 0 0 2 5)
+v8  net-_u4-pad3_ gnd pulse(5 0 0 0 0 5 10)
+v10  net-_u4-pad5_ gnd pulse(0 5 0 0 0 1 4)
+* u1  d1a plot_v1
+* u2  d2a plot_v1
+* u7  qa plot_v1
+* u9  qabar plot_v1
+* u11  qb plot_v1
+* u13  qbbar plot_v1
+* u15  qc plot_v1
+* u16  qcbar plot_v1
+* u14  qd plot_v1
+* u12  qdbar plot_v1
+* u10  qe plot_v1
+* u8  qebar plot_v1
+* u17  e plot_v1
+a1 [d1a d2a net-_u3-pad3_ net-_u3-pad4_ net-_u3-pad5_ ] [net-_u3-pad6_ net-_u3-pad7_ net-_u3-pad8_ net-_u3-pad9_ net-_u3-pad10_ ] u3
+a2 [net-_u4-pad1_ net-_u4-pad2_ net-_u4-pad3_ net-_u4-pad4_ net-_u4-pad5_ e ] [net-_u4-pad7_ net-_u4-pad8_ net-_u4-pad9_ net-_u4-pad10_ net-_u4-pad11_ net-_u4-pad12_ ] u4
+a3 [net-_u5-pad1_ net-_u5-pad2_ net-_u5-pad3_ net-_u5-pad4_ net-_u5-pad5_ ] [qa qabar qb qbbar qc ] u5
+a4 [net-_u6-pad1_ net-_u6-pad2_ net-_u6-pad3_ net-_u6-pad4_ net-_u6-pad5_ ] [qcbar qd qdbar qe qebar ] u6
+* Schematic Name:                             adc_bridge_5, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_6, NgSpice Name: adc_bridge
+.model u4 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_5, NgSpice Name: dac_bridge
+.model u5 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_5, NgSpice Name: dac_bridge
+.model u6 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 250e-03 10e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(d1a)
+plot v(d2a)
+plot v(qa)
+plot v(qabar)
+plot v(qb)
+plot v(qbbar)
+plot v(qc)
+plot v(qcbar)
+plot v(qd)
+plot v(qdbar)
+plot v(qe)
+plot v(qebar)
+plot v(e)
+.endc
+.end
